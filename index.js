@@ -223,6 +223,6 @@ app.delete('/order', async (req, res)=>{
     }
     res.status(200).json({res:'Del finish'})
 })
-
-app.listen( config.port, () => console.log(`Listening port ${config.port}!`))
+const host = '0.0.0.0';
+app.listen( config.port, host, () => console.log(`Listening port ${config.port}!`))
 
